@@ -275,7 +275,7 @@ async function newSession(quality) {
     },
     dimension,
   };
-  const response = await fetch(`${SERVER_URL}/v2/realtime.new`, {
+  const response = await fetch(`${SERVER_URL}/v2/realtime/new`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -300,7 +300,7 @@ async function newSession(quality) {
 
 // start the session
 async function startSession(session_id, sdp) {
-  const response = await fetch(`${SERVER_URL}/v2/realtime.start`, {
+  const response = await fetch(`${SERVER_URL}/v2/realtime/start`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -323,7 +323,7 @@ async function startSession(session_id, sdp) {
 
 // submit the ICE candidate
 async function handleICE(session_id, candidate) {
-  const response = await fetch(`${SERVER_URL}/v2/realtime.ice`, {
+  const response = await fetch(`${SERVER_URL}/v2/realtime/ice`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -345,7 +345,7 @@ async function handleICE(session_id, candidate) {
 }
 
 async function talk(session_id, text) {
-  const response = await fetch(`${SERVER_URL}/v2/realtime.task`, {
+  const response = await fetch(`${SERVER_URL}/v2/realtime/task`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -368,7 +368,7 @@ async function talk(session_id, text) {
 
 // stop session
 async function stopSession(session_id) {
-  const response = await fetch(`${SERVER_URL}/v2/realtime.stop`, {
+  const response = await fetch(`${SERVER_URL}/v2/realtime/stop`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
