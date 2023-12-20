@@ -13,7 +13,7 @@ const heygen_API = {
   'voice': {
     'voice_id': ''
   },
-  'silent_video_url': 'https://resource.heygen.com/silent.mp4'
+  'silent_video_url': 'https://resource.heygencdn.com/silent.mp4'
 };
 // ************************************************************************
 
@@ -458,7 +458,7 @@ async function generateSilentVideoHandler(){
           "video_inputs": [
             {
               "character": {"type":"talking_photo","talking_photo_id":photarID.value},
-              "voice":{"type":"audio","audio_url": "https://resource.heygen.com/silent.mp3"}}
+              "voice":{"type":"audio","audio_url": "https://resource.heygencdn.com/silent.mp3"}}
           ],
           "dimension": {"width": 300, "height": 300}
         }
